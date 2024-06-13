@@ -1,0 +1,68 @@
+.Download_file_cont{ 
+    color:white;
+    height: 41%;
+    background-color: #161821;
+    position: relative;
+
+
+}
+.check{
+    color: white;
+    height: 44%;
+    background-color: #161B21;
+    margin-top: 49px;
+}
+
+.top{
+    margin-top: 43px;
+    border-bottom: 1px solid #ffffff61;
+
+}
+
+.file_title{
+    font-family: Aduma;
+    font-size: 25px;
+    text-align: right;
+    margin-right: 13px;
+    position: relative;
+    top: 36px;
+
+}
+
+.file_subtitle{
+    font-family: Aduma;
+    font-size: 20px;
+    text-align: right;
+    margin-right: 13px;
+    position: relative;
+    top: 41px;
+}
+.file_btn{
+    color:#2196F3;
+    background-color: transparent;
+    border: 1px solid #2196F3;
+    width: 90%;
+    height: 36px;
+    border-radius: 20px;
+    margin-left: 5%;
+    margin-top: 67px;
+}
+.check_box_text{
+    text-align: right;
+    padding-right: 32px;
+    font-size: si;
+    margin-top: 19px;
+    color: #ffffff70;
+    background-image: url(./assets/check.png);
+    background-repeat: no-repeat;
+    background-position: 96%;
+}
+.pro_img{
+    position: absolute;
+    right: 0;
+    top: 31px;
+}
+
+.bottom_title{
+    margin-right: 65px;
+}

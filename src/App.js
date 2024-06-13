@@ -5,8 +5,7 @@ import Bg from './Bg';
 function App() {
   return (
   <div>
-
-<Bg></Bg>
+      <Bg></Bg>
   </div>
   );
 }
