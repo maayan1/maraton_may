@@ -2,7 +2,7 @@ import './NoBg.css';
 
 import React, { useRef} from 'react';
 
-import imgToRemove from './assets/imgToRemove'
+import imgToRemove from './assets/imgToRemove.png'
 
 function NoBg(props) {
     //props.comt_type

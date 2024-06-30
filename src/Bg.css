@@ -118,3 +118,30 @@
     flex-direction: row-reverse;
     margin-top: 14px;
 }
+.eula{
+    text-align: right;
+    background-color: #475366;
+    border: 0;
+    padding: 8px;
+    border-radius: 20px;
+    width: 128px;
+    margin-left: 10px;
+    padding-right: 16px;
+    color: #ffffff85;
+    background-image: url(./assets/eula.png);
+    background-repeat: no-repeat;
+    background-position: 17px 8px;
+    margin-top: 12px;
+    cursor: pointer;
+}
+
+.footer_left_div{
+    position: relative;
+}
+.footer_left_div_text{
+    color: #ffffff85;
+    text-align: right;
+    position: absolute;
+    right: 17px;
+    top: 20px;
+}

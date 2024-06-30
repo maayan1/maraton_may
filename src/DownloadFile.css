@@ -1,10 +1,9 @@
+
 .Download_file_cont{ 
     color:white;
     height: 41%;
     background-color: #161821;
     position: relative;
-
-
 }
 .check{
     color: white;
@@ -26,7 +25,6 @@
     margin-right: 13px;
     position: relative;
     top: 36px;
-
 }
 
 .file_subtitle{
@@ -46,6 +44,7 @@
     border-radius: 20px;
     margin-left: 5%;
     margin-top: 67px;
+    cursor: pointer;
 }
 .check_box_text{
     text-align: right;
