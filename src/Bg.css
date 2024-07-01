@@ -52,6 +52,10 @@
     background-image: url(./assets/Upload.png);
     background-repeat: no-repeat;
     background-position: 17px 8px;
+    z-index: 5;
+    position: relative;
+    cursor: pointer;
+
 }
 
 .right_div{
@@ -144,4 +148,12 @@
     position: absolute;
     right: 17px;
     top: 20px;
+}
+.file{
+    position: relative;
+    top: 55px;
+}
+
+.inputFileClass{
+    display: none;
 }
