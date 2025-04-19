@@ -1,4 +1,5 @@
 import './Bg.css';
+import DownloadFilePopup from './DownloadFilePopup';
 import close_red from './assets/close.png'
 import DownloadFile from './DownloadFile';
 import banner from './assets/banner.png'
@@ -6,7 +7,8 @@ import logo from './assets/logo.png'
 import React,  { useState,useRef} from 'react';
 import NoBg from './NoBg';
 import Eula from './Eula';
-import DownloadFilePopup from './DownloadFilePopup';
+import axios from 'axios';
+
 
 
 
@@ -21,6 +23,9 @@ function Bg() {
 
   const [ selected_tab_no_bg , setselected_tab_no_bg] = useState('selected_tab');
   const [ selected_tab_original , setselected_tab_original] = useState('');
+  const [ fileError , setFileError] = useState('');
+  const [color, setcolor] = useState('');
+
 
   function update_tab_no_bg(e){
 
@@ -42,7 +47,41 @@ const fileInput = () => {
   inputElement.current.click();
 };
 
+function upload_file(e){
+    let file = e.target.files[0];
+    console.log(file);
+    if( file.size <= 10000000 && (file.type ==='image/jpeg' || file.type ==='image/png' || file.type ==='image/jpg') ){ 
 
+
+      let formData = new FormData();
+      let server_url = 'http://localhost:5000/';
+  
+      formData.append('color', color);
+  
+      formData.append('file', file);
+  
+      axios({
+        method: 'post',
+        url: server_url+'upload_img',
+        data: formData,
+        headers: {
+          'Content-Type': 'multipart/form-data'
+        },
+      }).then(function (response) {
+       
+        console.log(response);
+      })
+        .catch(function (error) {
+  
+          console.log(error);
+        })
+  
+  
+    } else {
+      setFileError('קובץ לא נתמך');
+    } 
+
+}
 
 
   return (
@@ -56,8 +95,8 @@ const fileInput = () => {
 
               <div className='header_formats'> פורמטים נתמכים: png, jpeg </div>
               <button className='upload_img_btn' onClick={fileInput} > העלאת תמונה </button>
-              <input type="file" ref={inputElement} className='inputFileClass' ></input>
-
+              <input type="file" ref={inputElement} className='inputFileClass' onChange={upload_file} ></input>
+              <div className='file_err'>{fileError}</div>
             </div>
 
             <div className='middle_cont'>
@@ -92,7 +131,9 @@ const fileInput = () => {
                 <img src={logo} alt="creator img"/>
 
             </div>
-
+              <div className='loader'>
+                <div className='loaderIn'> 39% </div>
+              </div>
 
         </div>
               {show_eula ? <Eula close_popup_func={setshow_eula}  ></Eula>: <></>}

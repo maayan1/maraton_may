@@ -157,3 +157,27 @@
 .inputFileClass{
     display: none;
 }
+.file_err{
+    color: red;
+    font-size: 12px;
+    position: absolute;
+    left: 50px;
+}
+
+.loader{
+    border:1px solid #111;
+    width: 255px;
+    height:20px;
+    position:relative;
+    top:-500px;
+    margin:0 auto ;
+    left:-123px;
+}
+
+.loaderIn{
+    background-color: #9c27B0;
+    width:39%;
+    height: 20px;
+    text-align: center;
+    color: white;
+}
